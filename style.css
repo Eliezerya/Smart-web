@@ -1,0 +1,421 @@
+* { padding: 0; margin: 0;
+	text-decoration: none; 
+
+}
+
+/* - - - ICON - - -*/
+#icon {
+	height: 100px;
+	width: 100px;
+	
+
+}
+
+
+/*NAVIGATOR BAR*/
+
+.collapse navbar-collapse {
+
+}
+
+
+
+nav .navbar {
+	font-size: 18px;
+	display: flex;
+	padding-right: 20px;
+	background-color: black;
+	font-family: arial;
+	font-weight: bold;
+	align-items: center;
+	height: 70px;
+	
+	
+
+}
+
+nav div a {
+	color: white;
+	
+	
+}
+
+nav div a:hover {
+	color: red;
+	text-shadow: 2px 2px 20px red;
+}
+
+
+
+/*Body*/
+
+
+body {
+	background-color: rgb(53, 59, 56);
+	
+}
+
+
+.clock {
+
+	color: white;
+	font-size: 20px;
+	font-family: Orbitron;
+	font-weight: bold;
+	letter-spacing: 7px;
+	
+
+
+}
+
+/*SCROLL BAR*/
+::-webkit-scrollbar{
+	width: 12px;
+}
+::-webkit-scrollbar-thumb
+{
+
+	background: linear-gradient(transparent,white);
+	border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+
+	background: linear-gradient(transparent,#1a1712);
+	border-radius: 6px;
+}
+
+
+/*Image Banner*/
+body .container1 {
+	background-image: url(img/background.jpg);
+	background-size: cover;
+	height: 600px;
+	min-height: 350px;
+	padding: 5px;
+	margin-bottom: 50px;
+	padding-left: 50px;
+	background-repeat: no-repeat;
+	box-shadow: 0 0px 30px 0px white;
+	
+}
+
+body .container1 a:hover{
+	color: red;
+	background-color: pink;
+}
+
+body .container1 a:link {}  
+body .container1 a:active {
+	background-color: black;
+}  
+
+
+
+body .container div a {
+	text-decoration: none;
+	color : black;
+	font-family: arial;
+	text-shadow: 0px 5px 20px violet;
+}
+
+/*	BUTTON	*/
+
+.button {
+	width: 150px;
+	padding: 10px;
+	font-size: 30px;
+	color: #15f4ee;
+	font-family: poppins;
+	font-weight: 400;
+	border: 5px solid #15f4ee;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	cursor: pointer;
+	border-radius: 100px;
+	text-align: center;
+	transition: 1s;
+
+}
+
+.button:hover{
+	box-shadow: 0 5px 20px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee,
+	0 5px 20px 0 #15f4ee inset, 0 5px 50px 0 #15f4ee;
+
+}
+
+/*text*/
+.slogan {
+	color:white;
+	text-decoration: none;
+	text-shadow: 0px 0px 4px white;
+}
+
+.textcon {
+	color : white;
+	text-shadow: 0px 5px 20px #FF0000;
+}
+
+
+
+.containergb {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	padding: 15px;
+	margin-top: 20px;
+	margin-bottom: 100px;
+	background-image: url(img/full/backgroundgrey.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;	
+	box-shadow: 0 0px 30px 0px white;
+	
+
+}
+
+.gallery li {
+	width: 420px;
+	height: 236px;
+	overflow: hidden;
+	float:left;
+	margin-right: 15px;
+	position: relative;
+	background-position: center;	
+	box-shadow: 0 5px 5px 4px white;
+}
+
+.gallery li span {
+	display: block;
+	width: 420px;
+	height: 236px;
+	background-color: rgba(200,200,200,.5);
+	position: absolute;
+	top: 0;
+	text-align: center;
+	line-height: 236px;
+	color: black;
+	text-shadow: 1px 1px 1px #ddd;
+	opacity:0;
+	transition: .3s;
+}
+
+.gallery li a:hover span {
+	opacity: 1;
+}
+/* Overlay */
+.overlay {
+	height:0; 
+	width:0;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0);
+	z-index: 9999;
+	transition: .8s;
+	text-align: center;
+	padding: 50px 0;
+}
+
+.overlay:target {
+	height: auto;
+	width: auto;
+	bottom: 0;
+	right: 0;
+	background: rgba(0,0,0,.5);
+}
+
+.overlay img {
+	max-height: 100%;
+	max-width: 100%;
+	box-shadow: 2px 2px 10px rgba(0,0,0,.5)
+}
+
+.overlay:target img {
+	animation: zoomDanFade 1s;
+}
+
+.overlay .close {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+	color: white;
+	text-decoration: none;
+	background-color: black;
+	border: 1px solid white;
+	line-height: 14px;
+	padding: 5px;
+	opacity: 0;
+}
+
+.overlay:target .close {
+	animation: slideDownFade .5s .5s forwards;
+}
+/* animasi */
+@keyframes zoomDanFade {
+	0% {
+		transform: scale(0);
+		opacity: 0;
+
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@keyframes slideDownFade {
+	0% {
+		opacity: 0;
+		margin-top: -20px;
+	}
+	100%{
+		opacity: 100;
+		margin-top: 0;
+	}
+}
+
+ul li 
+{
+	margin: 10px;
+
+}
+
+/*END Container GB*/
+
+.textDivision {
+	text-align: center;
+	color : white;
+	text-shadow: 0px 0px 20px white;
+
+}
+
+.information {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	padding: 10px;
+	background-color: black;
+	color: white;
+	text-shadow: 0px 0px 8px #;
+
+
+}
+
+.aboutUs{
+	
+	height: 300px;
+	width: 500px;
+	padding: 10px;
+	display: flex;
+	align-items: center;
+
+
+
+}
+
+
+.contact {
+	height: 400px;
+	width: 500px;
+	text-align: center;
+	background-color: black;
+	color: white;
+
+
+
+}
+
+.about2 {
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+	padding-bottom: 20px;
+	background-color: black;
+	color: white;
+
+}
+
+.line {
+	border-right:  1px solid white; 
+}
+
+#textAtlet {
+	text-align: center;
+	color : white;
+	text-shadow: 0px 0px 20px white;
+
+}
+
+.atlet {
+	text-align: center;
+	margin-bottom: 50px;
+	trans
+}
+
+.atlet2 {
+	display: flex;
+	justify-content: space-around;
+	padding: 4px;
+	margin-top: 20px;
+	margin-bottom: 100px;
+
+}
+
+.atl1 {
+	height: 300px;
+	width: 400px;
+	background-image: url(img/esportsmaller.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	cursor: pointer;
+
+
+
+}
+
+.atl2 {
+	
+	height: 300px;
+	width: 400px;
+	background-image: url(img/nekopoi.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	cursor: pointer;
+
+
+}
+
+.atl3 {
+	
+	height: 300px;
+	width: 400px;
+	background-image: url(img/esportsmaller.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: 100%;}
+
+	/* ------ - - - - FOOTER - - - - ------ */
+
+
+
+	.copyright {
+		
+		text-align: center;
+		background-color: rgb(82, 90, 112);
+		height: 50px;
+		font-size: 20px;
+
+	}
+
+
+	
+	body div .footer {
+		box-shadow: 0 0px 30px 0px white;
+
+	}
